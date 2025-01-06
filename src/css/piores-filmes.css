@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    background-color: #302e2b;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #111111;
+    border-radius: 10px;
+    position: relative;
+}
+
+h1 {
+    display: flex;
+    align-items: center; /* Alinha o texto e a imagem no eixo vertical */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    gap: 10px; /* Espaço entre o texto e a imagem */
+}
+
+.container h1 img {
+    width: 55px;
+    height: 55px;
+}
+
+.container h1 img{
+    width: 55px;
+    height: 55px
+}
+
+input {
+    width: 80%;
+    height: 45px;
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    align-items: center;
+    justify-content: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    background-color: #262421;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Alinha os elementos verticalmente */
+    transition: background-color 0.3s ease;
+}
+
+li:hover {
+    background-color: #7e7e7e;
+}
+
+li button {
+    margin-right: 1px; /* Espaçamento entre os botões */
+}
+
+li button:last-child {
+    margin-right: 0; /* Remove a margem do último botão */
+}
+
+.deleteButton {
+    margin-left: 5px;
+}
+
+.adcionar-button {
+    position: relative;
+    width: 200px;
+    height: 62px;
+    background: #3fbb49;
+    border: none;
+    margin: 0 auto;
+    margin-top: 40px;
+    overflow: hidden;
+    z-index: 1;
+    cursor: pointer;
+    transition: color 0.3s;
+    /* Typo */
+    line-height: 60px;
+    font-size: 0.9rem;
+    text-align: center;
+    color: #fff;
+}
+  
+.adcionar-button:after {
+    position: absolute;
+    top: 90%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #2b9e27;
+    content: "";
+    z-index: -2;
+    transition: transform 0.3s;
+}
+  
+.adcionar-button:hover::after {
+    transform: translateY(-80%);
+    transition: transform 0.3s;
+}
+
+.button-effect {
+    display: inline-block;
+    width: auto;
+    height: 40px;
+    padding: 0 15px;
+    background: #4d73db;
+    margin: 0;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 0.9rem;
+    text-align: center;
+    line-height: 40px;
+    transition: background-color 0.3s, transform 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.button-effect::after {
+    position: absolute;
+    top: 90%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #3d40d1;
+    content: "";
+    z-index: -1;
+    transition: transform 0.3s;
+}
+
+.button-effect:hover::after {
+    transform: translateY(-80%);
+}
+
+.button-effect:hover {
+    color: #fff;
+}
+
+.remover-button {
+    display: inline-block;
+    width: auto;
+    height: 40px;
+    padding: 0 15px;
+    background: #db4d4d;
+    margin: 0;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 0.9rem;
+    text-align: center;
+    line-height: 40px;
+    transition: background-color 0.3s, transform 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.remover-button::after {
+    position: absolute;
+    top: 90%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #d13d3d;
+    content: "";
+    z-index: -1;
+    transition: transform 0.3s;
+}
+
+.remover-button:hover::after {
+    transform: translateY(-80%);
+}
+
+.remover-button:hover {
+    color: #fff;
+}
+  

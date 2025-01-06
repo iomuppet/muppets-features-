@@ -49,6 +49,7 @@ html, body {
     position: fixed;
     background-color: #262421;
     padding-top: 20px;
+    z-index: 2;
 }
 
 /* Estilo dos links da sidebar */
@@ -86,6 +87,7 @@ html, body {
     padding: 30px;
     color: aliceblue;
     overflow-y: auto;
+    z-index: 1;
 }
 
 /* Dropdown */
@@ -101,7 +103,7 @@ html, body {
     width: 300px;
     height: 100%; /* Faz o dropdown ocupar toda a altura da página */
     background-color: #141413;
-    z-index: 1;
+    z-index: 3;
     overflow-y: auto; /* Adiciona rolagem se o conteúdo for grande */
 }
 
