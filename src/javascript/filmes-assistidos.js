@@ -66,6 +66,7 @@ function deleteTask(button) {
   tasklist.removeChild(li);
 }
 
+// Função de perguntar se quer excluir um filme da lista
 function deleteTask(button) {
   const li = button.parentElement.parentElement;
   const confirmDelete = confirm("Tem certeza que deseja remover este filme?");
