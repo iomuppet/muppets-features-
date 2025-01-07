@@ -66,6 +66,14 @@ function deleteTask(button) {
   tasklist.removeChild(li);
 }
 
+function deleteTask(button) {
+  const li = button.parentElement.parentElement;
+  const confirmDelete = confirm("Tem certeza que deseja remover este filme?");
+  if (confirmDelete) {
+    tasklist.removeChild(li);
+  }
+}
+
 // Função para salvar no localStorage
 function saveTasks() {
   const tasks = [];
