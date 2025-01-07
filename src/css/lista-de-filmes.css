@@ -77,8 +77,8 @@ li button:last-child {
 
 .adcionar-button {
     position: relative;
-    width: 200px;
-    height: 62px;
+    width: 18.2%;
+    height: 3.8rem;
     background: #3fbb49;
     border: none;
     margin: 0 auto;
@@ -187,5 +187,49 @@ li button:last-child {
 
 .remover-button:hover {
     color: #fff;
+}
+
+@media (max-width: 1141px) {
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        width: 90%;
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    input {
+        width: 98%;  /* Faz com que o campo de texto ocupe 100% da largura disponível */
+        height: 40px;
+    }
+
+    .adcionar-button {
+        width: 100%;  /* Faz o botão de adicionar ocupar toda a largura */
+        height: 50px;
+    }
+
+    ul {
+        padding-left: 10px;
+    }
+
+    li {
+        padding: 8px;
+    }
+
+    li button {
+        font-size: 0.8rem;
+    }
+
+    .button-effect, .remover-button {
+        font-size: 0.8rem;
+        height: 35px;  /* Reduz a altura dos botões */
+        padding: 0 10px;
+    }
 }
   
