@@ -130,3 +130,66 @@ html, body {
 .dropdown:hover .dropdown-container {
     display: block;
 }
+
+@media (max-width: 1629px) {
+    /* Ajuste para o menu vertical fixo */
+    .sidebar {
+      position: fixed; /* Fixar na lateral */
+      top: 0;
+      left: 0;
+      height: 110%; /* Full height */
+      width: 50px; /* Largura estreita da barra lateral */
+      background-color: #262421;
+      padding-top: 20px;
+      font-size: 14px;
+      z-index: 10;
+    }
+
+    .menus{
+        margin-top: 20px;
+    }
+    .dropdown-container {
+        display: none;
+        position: fixed; /* Muda de absolute para fixed */
+        top: 0;
+        left: 50px; /* O dropdown abre ao lado da sidebar */
+        width: 300px;
+        height: 100%; /* Faz o dropdown ocupar toda a altura da página */
+        background-color: #141413;
+        z-index: 3;
+        overflow-y: auto; /* Adiciona rolagem se o conteúdo for grande */
+    }
+    
+    a.dropdown-btn{
+        color: transparent; /* O texto fica invisível, mas o espaço é mantido */
+    }
+
+  
+    .container {
+        width: calc(100% - 70px); /* A largura da container é 100% da tela menos 70px da sidebar */
+        margin: 30px auto;
+        padding: 20px;
+        background-color: #111111;
+        border-radius: 10px;
+        position: relative;
+        margin-left: 60px; /* Distância da sidebar */
+        box-sizing: border-box; /* Garante que o padding e a borda sejam considerados no cálculo da largura */
+        overflow-x: auto; /* Garante que não ultrapasse a tela */
+    }
+
+    .main-content {
+        position: absolute;
+        left: 50px; /* Faz o conteúdo começar após a sidebar estreita */
+        top: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+        color: aliceblue;
+        overflow-y: auto;
+        z-index: 1;
+        font-size: 13px;
+    }
+}
