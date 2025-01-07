@@ -189,7 +189,7 @@ li button:last-child {
     color: #fff;
 }
 
-@media (max-width: 1141px) {
+@media (max-width: 1165px) {
     body {
         font-size: 14px;
     }
@@ -214,12 +214,8 @@ li button:last-child {
         height: 50px;
     }
 
-    ul {
-        padding-left: 10px;
-    }
-
     li {
-        padding: 8px;
+        padding: 10px;
     }
 
     li button {
