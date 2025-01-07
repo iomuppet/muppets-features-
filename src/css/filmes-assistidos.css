@@ -228,3 +228,117 @@ li button:last-child {
         padding: 0 10px;
     }
 }
+
+/* Links inside the dropdown */
+.dropdown-container a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #dddddd;
+    display: block;
+    transition: 0.3s;
+}
+
+.dropdown-container a:hover {
+    background-color: #575757;
+}
+
+/* Hover effect to show the dropdown */
+.dropdown:hover .dropdown-container {
+    display: block;
+}
+
+.dropdown {
+    position: relative;
+}
+
+/* Garante que a sidebar ocupe 100% da altura da página */
+.sidebar {
+    height: 100%;
+    width: 190px;
+    margin-top: -30px;
+    position: fixed;
+    background-color: #262421;
+    padding-top: 20px;
+    z-index: 2;
+}
+
+/* Estilo dos links da sidebar */
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 15px;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #111111;
+}
+
+.sidebar a img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px; /* Espaçamento entre a imagem e o texto */
+}
+
+/* Garante que o conteúdo principal tenha o tamanho correto */
+.main-content {
+    position: absolute;
+    left: 190px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    padding: 30px;
+    color: aliceblue;
+    overflow-y: auto;
+    z-index: 1;
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-container {
+    display: none;
+    position: fixed; /* Muda de absolute para fixed */
+    top: 0;
+    left: 190px; /* O dropdown abre ao lado da sidebar */
+    width: 300px;
+    height: 100%; /* Faz o dropdown ocupar toda a altura da página */
+    background-color: #141413;
+    z-index: 3;
+    overflow-y: auto; /* Adiciona rolagem se o conteúdo for grande */
+}
+
+/* Links dentro do dropdown */
+.dropdown-container a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #dddddd;
+    display: flex;
+    transition: 0.3s;
+    align-items: center;
+}
+
+.dropdown-container a img {
+    width: 25px;
+    height: 25px;
+}
+
+.dropdown-container a:hover {
+    background-color: #0f0f0f;
+}
+
+/* Hover effect para mostrar o dropdown */
+.dropdown:hover .dropdown-container {
+    display: block;
+}
