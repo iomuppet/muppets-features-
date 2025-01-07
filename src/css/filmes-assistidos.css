@@ -205,13 +205,17 @@ li button:last-child {
     }
 
     input {
-        width: 98%;  /* Faz com que o campo de texto ocupe 100% da largura disponível */
+        width: calc(100% - 1px);  /* Subtrai o total das margens */
         height: 40px;
+        padding: 8px;  /* Padding interno igual dos dois lados */
+        margin-left: 1px;  /* Margem à esquerda */
+        box-sizing: border-box;  /* Garante que o padding e a margem não aumentem a largura total */
     }
 
     .adcionar-button {
         width: 100%;  /* Faz o botão de adicionar ocupar toda a largura */
         height: 50px;
+        margin-top: 15px;
     }
 
     li {
@@ -387,5 +391,5 @@ li button:last-child {
         margin-left: 60px; /* Distância da sidebar */
         box-sizing: border-box; /* Garante que o padding e a borda sejam considerados no cálculo da largura */
         overflow-x: auto; /* Garante que não ultrapasse a tela */
-    }
+    }  
 }
