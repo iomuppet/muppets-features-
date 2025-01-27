@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="imagex/png" href="src/images/muppet.png">
-    <link rel="stylesheet" href="src/css/index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Muppets Features</title>
+    <link rel="stylesheet" href="src/css/livros.css">
+    <title>Leitura</title>
 </head>
 <body>
     <div class="sidebar" id="mySidebar">
@@ -50,12 +48,15 @@
             </div>
         </div>
     </div>
-
-    <div class="main-content">
-        <h2>Conteúdo Principal</h2>
-        <p>Aqui está o conteúdo principal da página.</p>
-    </div>
     
-    <script src="src/javascript/script.js"></script>
+    <div class="container">
+        <h1>Meus livros <img src="src/images/caderno2.png" alt=""></h1>
+        <input type="text" id="taskInput" placeholder="Adicione um Livro...">
+        <button onclick="addPages()" class="paginas-button">Páginas</button>
+        <button onclick="addTask()" class="adicionar-button">Adicionar</button>
+        <ul id="taskList"></ul>
+    </div>
 </body>
+
+<script src="src/javascript/livros.js"></script>
 </html>
