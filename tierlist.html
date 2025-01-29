@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/tierlist.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="sidebar" id="mySidebar">
+        <div class="menus">
+
+        <div class="dropdown">
+            <a href="index.html" class="dropdown-btn">
+                <img src="src/images/casa.png" alt="">Início
+            </a>
+        </div>
+        
+        <div class="dropdown">
+            <a href="#filmes" class="dropdown-btn"><img src="src/images/fita.png" alt="">Filmes</a>
+            <div class="dropdown-container">
+                <a href="filmes-assistidos.html"> <img src="src/images/filmes.png" alt="">Filmes assistidos</a>
+                <a href="lista-de-filmes.html"><img src="src/images/lista de filmes.png" alt="">Lista de filmes para assistir</a>
+                <a href="piores-filmes.html"><img src="src/images/filmes ruim.png" alt="">Piores filmes da história</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <a href="#tierlist" class="dropdown-btn"><img src="src/images/lista.png" alt="">Tier List</a>
+            <div class="dropdown-container">
+                <a href="tierlist.html"><img src="src/images/tier list.png" alt=""> Criar tier list </a>
+                <a href="#tier2"><img src="src/images/nossas tier lists.png" alt=""> Nossas Tier lists</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <a href="#anotacoes" class="dropdown-btn"><img src="src/images/anotações.png" alt="">Anotações</a>
+            <div class="dropdown-container">
+                <a href="livros.html"><img src="src/images/livros.png" alt="">Lista de livros</a>
+                <a href="#anotacao2">Anotação 2</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <a href="#" class="dropdown-btn"><img src="src/images/to do.png" alt="">To do</a>
+            <div class="dropdown-container">
+                <a href="#anotacao1"></a>
+                <a href="#anotacao2"></a>
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+    <main>
+        <section class="section" id="section--1">
+          <div class="section__title">
+            <h2 class="section__title-description">Tier list</h2>
+            <h3 class="section__title-text">Comece movendo as cartas!</h3>
+          </div>
+          <div class="content" id="content">
+            <div class="content__row">
+              <div class="content__row-label">S (Pefeito)</div>
+            </div>
+            <div class="content__row">
+              <div class="content__row-label">A (Ótimo)</div>
+            </div>
+            <div class="content__row">
+              <div class="content__row-label">B (Bom)</div>
+            </div>
+            <div class="content__row">
+              <div class="content__row-label">C (Mediano)</div>
+            </div>
+            <div class="content__row">
+              <div class="content__row-label">D (Ruim)</div>
+            </div>
+            <!-- <div class="content__row">
+                              <div class="content__row-label">E (Horrible)</div>
+                          </div>
+                          <div class="content__row">
+                              <div class="content__row-label">F (Worst^_^)</div>
+                          </div>  -->
+          </div>
+        </section>
+        
+        <button id="captureBtn">Salvar Tier List</button>
+      
+        <section class="section" id="section--2">
+          <div class="section__title">
+            <h2 class="section__title-description">Desça o scroll para adicionar as imagens</h2>
+            <h3 class="section__title-text">Todas as cartas adicionadas estão aqui</h3>
+          </div>
+      
+          <form class="storage">
+            <div class="storage-box"></div>
+          </form>
+      
+          <div class="upload">
+            <p>Mova / Solte as images aqui ou <span class="browse">Procure</span></p>
+            <input type="file" class="file" multiple="multiple" accept="image/png, image/jpeg, image/jpg" />
+          </div>
+        </section>
+      </main>
+</body>
+<script src="src/javascript/tierlist.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</html>

@@ -265,69 +265,6 @@ li button:last-child {
     color: #fff;
 }
 
-@media (max-width: 1165px) {
-    body {
-        font-size: 14px;
-    }
-
-    .container {
-        width: 90%;
-        margin: 20px auto;
-        padding: 15px;
-    }
-
-    h1 {
-        font-size: 1.5rem;
-    }
-
-    input {
-        width: calc(100% - 1px);  /* Subtrai o total das margens */
-        height: 40px;
-        padding: 8px;  /* Padding interno igual dos dois lados */
-        margin-left: 1px;  /* Margem à esquerda */
-        box-sizing: border-box;  /* Garante que o padding e a margem não aumentem a largura total */
-    }
-
-    .adicionar-button {
-        width: 100%;  /* Faz o botão de adicionar ocupar toda a largura */
-        height: 50px;
-        margin-top: 15px;
-    }
-
-    .paginas-button {
-        width: 100%;  /* Faz o botão de adicionar ocupar toda a largura */
-        height: 50px;
-        margin-top: 15px;
-    }
-
-    li {
-        padding: 10px;
-    }
-
-    li button {
-        font-size: 0.8rem;
-    }
-
-    .button-effect, .remover-button {
-        font-size: 0.8rem;
-        height: 35px;  /* Reduz a altura dos botões */
-        padding: 0 10px;
-    }
-}
-
-@media (max-width: 1629px) {
- 
-    .container {
-        margin: 30px auto;
-        padding: 20px;
-        background-color: #111111;
-        border-radius: 10px;
-        position: relative;
-        box-sizing: border-box; /* Garante que o padding e a borda sejam considerados no cálculo da largura */
-        overflow-x: auto; /* Garante que não ultrapasse a tela */
-    }  
-}
-
 /* Links inside the dropdown */
 .dropdown-container a {
     padding: 10px 15px;
@@ -349,13 +286,6 @@ li button:last-child {
 
 .dropdown {
     position: relative;
-}
-
-/* Garante que o body e o html ocupem toda a altura da página */
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
 }
 
 /* Garante que a sidebar ocupe 100% da altura da página */
@@ -449,23 +379,72 @@ html, body {
     display: block;
 }
 
+
+
+@media (max-width: 1165px) {
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        width: 90%;
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    input {
+        width: calc(100% - 1px);  /* Subtrai o total das margens */
+        height: 40px;
+        padding: 8px;  /* Padding interno igual dos dois lados */
+        margin-left: 1px;  /* Margem à esquerda */
+        box-sizing: border-box;  /* Garante que o padding e a margem não aumentem a largura total */
+    }
+
+    .adicionar-button {
+        width: 100%;  /* Faz o botão de adicionar ocupar toda a largura */
+        height: 50px;
+        margin-top: 15px;
+    }
+
+    .paginas-button {
+        width: 100%;  /* Faz o botão de adicionar ocupar toda a largura */
+        height: 50px;
+        margin-top: 15px;
+    }
+
+    li {
+        padding: 10px;
+    }
+
+    li button {
+        font-size: 0.8rem;
+    }
+
+    .button-effect, .remover-button, .progress-button {
+        font-size: 0.8rem;
+        height: 35px;  /* Reduz a altura dos botões */
+        padding: 0 10px;
+    }
+}
+
 @media (max-width: 1629px) {
     /* Ajuste para o menu vertical fixo */
     .sidebar {
-      position: fixed; /* Fixar na lateral */
-      top: 0;
-      left: 0;
-      height: 110%; /* Full height */
-      width: 50px; /* Largura estreita da barra lateral */
-      background-color: #262421;
-      padding-top: 20px;
-      font-size: 14px;
-      z-index: 10;
+        position: fixed;
+        top: 30px; /* Ajuste o valor para combinar com o primeiro código */
+        left: 0;
+        height: calc(100% - 20px); /* Ajusta a altura para compensar o `top` */
+        width: 50px; /* Largura reduzida da barra lateral */
+        background-color: #262421;
+        padding-top: 20px;
+        font-size: 14px;
+        z-index: 10;
     }
 
-    .menus{
-        margin-top: 20px;
-    }
     .dropdown-container {
         display: none;
         position: fixed; /* Muda de absolute para fixed */
@@ -493,21 +472,6 @@ html, body {
         margin-left: 60px; /* Distância da sidebar */
         box-sizing: border-box; /* Garante que o padding e a borda sejam considerados no cálculo da largura */
         overflow-x: auto; /* Garante que não ultrapasse a tela */
-    }
-
-    .main-content {
-        position: absolute;
-        left: 50px; /* Faz o conteúdo começar após a sidebar estreita */
-        top: 0;
-        right: 0;
-        bottom: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 30px;
-        color: aliceblue;
-        overflow-y: auto;
-        z-index: 1;
-        font-size: 13px;
-    }
+    }  
 }
+
