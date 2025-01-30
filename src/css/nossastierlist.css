@@ -22,9 +22,10 @@ html {
  
   .slider {
     position: relative;
-    width: 1160px;
+    width: 1240px;
     height: 500px;
-    margin: 50px auto;
+    border-radius: 10px;
+    margin: 30px auto;
     color: aliceblue;
     background-color: #111111;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 
@@ -190,7 +191,7 @@ html {
 .sidebar {
     height: 100%;
     width: 190px;
-    margin-top: -50px;
+    margin-top: -30px;
     position: fixed;
     background-color: #262421;
     padding-top: 20px;
