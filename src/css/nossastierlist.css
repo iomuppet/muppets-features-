@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    background-color: #302e2b;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+  }  
+ 
+  .slider {
+    position: relative;
+    width: 1160px;
+    height: 500px;
+    margin: 50px auto;
+    color: aliceblue;
+    background-color: #111111;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 
+                0 1px 5px 0 rgba(0, 0, 0, 0.12),
+                0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+  }
+  
+  .slider-controls {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 200px;
+    text-align: center;
+    transform: translateX(-50%);
+    z-index: 1000;
+    list-style: none;
+  }
+  
+  .slider input[type="radio"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider-controls label {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #212121;
+    transition: background-color 0.2s linear;
+  }
+  
+  #btn-1:checked ~ .slider-controls label[for="btn-1"],
+  #btn-2:checked ~ .slider-controls label[for="btn-2"],
+  #btn-3:checked ~ .slider-controls label[for="btn-3"], 
+  #btn-4:checked ~ .slider-controls label[for="btn-4"] {
+    background-color: rgb(235, 100, 95);
+  }
+  
+  /* SLIDES */
+  
+  .slides {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+  }
+  
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: transform 250ms linear;
+  }
+  
+  .slide-content {
+    width: 400px;
+  }
+  
+  .slide-title {
+    margin-bottom: 20px;
+    font-size: 36px;
+  }
+  
+  .slide-text {
+    margin-bottom: 20px;
+  }
+  
+  .slide-link {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 3px;
+    text-decoration: none;
+    background-color:rgb(235, 100, 95);
+  }
+  
+  .slide-image img {
+    max-width: 100%;
+  }
+  
+  /* Slide animations */
+  #btn-1:checked ~ .slides .slide:nth-child(1),
+  #btn-2:checked ~ .slides .slide:nth-child(2),
+  #btn-3:checked ~ .slides .slide:nth-child(3),
+  #btn-4:checked ~ .slides .slide:nth-child(4) {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  
+  #btn-1:not(:checked) ~ .slides .slide:nth-child(1),
+  #btn-2:not(:checked) ~ .slides .slide:nth-child(2),
+  #btn-3:not(:checked) ~ .slides .slide:nth-child(3),
+  #btn-4:not(:checked) ~ .slides .slide:nth-child(4) {
+    animation-name: swap-out;
+    animation-duration: 300ms;
+    animation-timing-function: linear;
+  }
+  
+  @keyframes swap-out {
+    0% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    50% {
+      transform: translateX(50%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+
+  @media (max-width: 1165px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    }
+
+/* Links inside the dropdown */
+.dropdown-container a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #dddddd;
+    display: block;
+    transition: 0.3s;
+}
+
+.dropdown-container a:hover {
+    background-color: #575757;
+}
+
+/* Hover effect to show the dropdown */
+.dropdown:hover .dropdown-container {
+    display: block;
+}
+
+.dropdown {
+    position: relative;
+}
+
+/* Garante que a sidebar ocupe 100% da altura da página */
+.sidebar {
+    height: 100%;
+    width: 190px;
+    margin-top: -50px;
+    position: fixed;
+    background-color: #262421;
+    padding-top: 20px;
+    z-index: 2;
+}
+
+/* Estilo dos links da sidebar */
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 15px;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #111111;
+}
+
+.sidebar a img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px; /* Espaçamento entre a imagem e o texto */
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-container {
+    display: none;
+    position: fixed; /* Muda de absolute para fixed */
+    top: 0;
+    left: 190px; /* O dropdown abre ao lado da sidebar */
+    width: 300px;
+    height: 100%; /* Faz o dropdown ocupar toda a altura da página */
+    background-color: #141413;
+    z-index: 3;
+    overflow-y: auto; /* Adiciona rolagem se o conteúdo for grande */
+}
+
+/* Links dentro do dropdown */
+.dropdown-container a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #dddddd;
+    display: flex;
+    transition: 0.3s;
+    align-items: center;
+}
+
+.dropdown-container a img {
+    width: 25px;
+    height: 25px;
+}
+
+.dropdown-container a:hover {
+    background-color: #0f0f0f;
+}
+
+/* Hover effect para mostrar o dropdown */
+.dropdown:hover .dropdown-container {
+    display: block;
+}
+
+@media (max-width: 1629px) {
+    /* Ajuste para o menu vertical fixo */
+    .sidebar {
+      position: fixed; /* Fixar na lateral */
+      top: 0;
+      left: 0;
+      height: 110%; /* Full height */
+      width: 50px; /* Largura estreita da barra lateral */
+      background-color: #262421;
+      padding-top: 20px;
+      font-size: 14px;
+      z-index: 10;
+    }
+
+    .menus{
+        margin-top: 30px;
+    }
+    .dropdown-container {
+        display: none;
+        position: fixed; /* Muda de absolute para fixed */
+        top: 0;
+        left: 50px; /* O dropdown abre ao lado da sidebar */
+        width: 300px;
+        height: 100%; /* Faz o dropdown ocupar toda a altura da página */
+        background-color: #141413;
+        z-index: 3;
+        overflow-y: auto; /* Adiciona rolagem se o conteúdo for grande */
+    }
+    
+    a.dropdown-btn{
+        color: transparent; /* O texto fica invisível, mas o espaço é mantido */
+    }
+}
